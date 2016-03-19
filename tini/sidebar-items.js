@@ -1,0 +1,1 @@
+initSidebarItems({"macro":[["get_or!",""],["get_vec_or!",""]],"struct":[["Ini","Structure for INI-file data"]]});

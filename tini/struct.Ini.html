@@ -81,13 +81,13 @@
 <span class='kw'>let</span> <span class='ident'>value</span>: <span class='prelude-ty'>Option</span><span class='op'>&lt;</span><span class='ident'>u8</span><span class='op'>&gt;</span> <span class='op'>=</span> <span class='ident'>conf</span>.<span class='ident'>get</span>(<span class='string'>&quot;section&quot;</span>, <span class='string'>&quot;one&quot;</span>);
 <span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>value</span>, <span class='prelude-val'>Some</span>(<span class='number'>1</span>));</pre>
 </div><h4 id='method.section' class='method'><code>fn <a href='#method.section' class='fnname'>section</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(self, name: S) -&gt; Self</code></h4>
-<div class='docblock'><p>Add new empty section to Ini</p>
+<div class='docblock'><p>Set section name for following <code>[item()](#method.item)</code>s, but don&#39;t create section</p>
 
 <h1 id='example-1' class='section-header'><a href='#example-1'>Example</a></h1><pre class='rust rust-example-rendered'>
 <span class='kw'>use</span> <span class='ident'>tini</span>::<span class='ident'>Ini</span>;
 
 <span class='kw'>let</span> <span class='ident'>conf</span> <span class='op'>=</span> <span class='ident'>Ini</span>::<span class='ident'>new</span>().<span class='ident'>section</span>(<span class='string'>&quot;empty&quot;</span>);
-<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>conf</span>.<span class='ident'>to_buffer</span>(), <span class='string'>&quot;[empty]&quot;</span>.<span class='ident'>to_owned</span>());</pre>
+<span class='macro'>assert_eq</span><span class='macro'>!</span>(<span class='ident'>conf</span>.<span class='ident'>to_buffer</span>(), <span class='ident'>String</span>::<span class='ident'>new</span>());</pre>
 </div><h4 id='method.item' class='method'><code>fn <a href='#method.item' class='fnname'>item</a>&lt;S: <a class='trait' href='https://doc.rust-lang.org/nightly/core/convert/trait.Into.html' title='core::convert::Into'>Into</a>&lt;<a class='struct' href='https://doc.rust-lang.org/nightly/collections/string/struct.String.html' title='collections::string::String'>String</a>&gt;&gt;(self, name: S, value: S) -&gt; Self</code></h4>
 <div class='docblock'><p>Add key-value pair to last section</p>
 

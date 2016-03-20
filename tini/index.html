@@ -46,10 +46,21 @@
             <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">
                 [<span class='inner'>&#x2212;</span>]
             </a>
-        </span><a id='src-0' class='srclink' href='../src/tini/lib.rs.html#1-368' title='goto source code'>[src]</a></span></h1>
-<div class='docblock'><p><em><strong>tini</strong> is a <strong>t</strong>iny <strong>ini</strong>-file reader and writer</em></p>
+        </span><a id='src-0' class='srclink' href='../src/tini/lib.rs.html#1-385' title='goto source code'>[src]</a></span></h1>
+<div class='docblock'><p><em><strong>tini</strong> is a <strong>t</strong>iny <strong>ini</strong>-file parsing library</em></p>
 
-<p>This small library provides basic functions to operate with ini-files</p>
+<p>This small library provides basic functions to operate with ini-files.</p>
+
+<p>Features:</p>
+
+<ul>
+<li>no dependencies;</li>
+<li>parsing <a href="struct.Ini.html#method.from_file">from file</a> and <a href="struct.Ini.html#method.from_buffer">from buffer</a>;</li>
+<li><a href="struct.Ini.html#method.get">convert parsed value to given type</a>;</li>
+<li><a href="struct.Ini.html#method.get_vec">parse comma-separated lists to vectors</a>;</li>
+<li>construct new ini-structure with <a href="struct.Ini.html#method.item">method chaining</a>;</li>
+<li>writing <a href="struct.Ini.html#method.to_file">to file</a> and <a href="struct.Ini.html#method.to_buffer">to buffer</a>.</li>
+</ul>
 
 <h1 id='examples' class='section-header'><a href='#examples'>Examples</a></h1>
 <h2 id='read-from-buffer-and-get-string-values' class='section-header'><a href='#read-from-buffer-and-get-string-values'>Read from buffer and get string values</a></h2><pre class='rust rust-example-rendered'>
